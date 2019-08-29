@@ -1,0 +1,27 @@
+/* Background gradient from https://cssgradient.io/ */
+body {
+    height:100%;
+    background: rgb(191,174,238);
+    background: radial-gradient(circle, rgba(191,174,238,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+html {
+    min-height: 100%
+}
+
+#content {
+    margin-top:40px;
+    text-align: center;
+    box-shadow: 0 0 200px white;
+
+}
+
+#story {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 0px 20px 0px;
+}
+
+#redoButton {
+    margin-top: 40px;
+}

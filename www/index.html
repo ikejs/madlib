@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-4 offset-md-4 jumbotron" id="content">
+            <h2>Romeo &amp; Juliet</h2>
+            <h4 class="lead">Prologue Madlib</h4>
+            <hr>
+            <div class="col-md-8 offset-md-2" id="form">
+                <form id="userInput" name="userInput">
+                    <div class="input-group mb-3">
+                      <input required id="one" autofocus type="text" class="form-control" placeholder="Plural Noun">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="two" type="text" class="form-control" placeholder="Place">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="three" type="text" class="form-control" placeholder="Noun">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="four" type="text" class="form-control" placeholder="Plural Noun">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="five" type="text" class="form-control" placeholder="Noun">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="six" type="text" class="form-control" placeholder="Adjective">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="seven" type="text" class="form-control" placeholder="Verb">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="eight" type="text" class="form-control" placeholder="Number">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="nine" type="text" class="form-control" placeholder="Adjective">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="ten" type="text" class="form-control" placeholder="Body Part">
+                    </div>
+                    <div class="input-group mb-3">
+                      <input required id="eleven" type="text" class="form-control" placeholder="Verb">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Create Madlib</button>
+                </form>
+            </div>
+            <p id="story" class="col-md-12">
+            </p>
+            <button id="redoButton" class="btn btn-outline-info">Use Different Words</button>
+        </div>
+    </body>
+    <script src="madlib.js"></script>
+
+</html>
