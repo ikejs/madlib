@@ -4,21 +4,6 @@ import nltk
 # ^ Remove hash on first run to download!
 from nltk.corpus import wordnet as wn
 
-number = 0
-
-def getNumberFromUser():
-    global number
-    number = raw_input("Enter a number: ")
-    if len(number) < 1:
-        getNumberFromUser()
-#https://stackoverflow.com/questions/5424716/how-to-check-if-string-input-is-a-number/5424739
-    try:
-       val = int(number)
-    except ValueError:
-       print(number + " is not a number!")
-       getNumberFromUser()
-
-getNumberFromUser()
 
 userInput = [
     raw_input("Enter a plural noun: "),
@@ -28,7 +13,7 @@ userInput = [
     raw_input("Enter a noun: "),
     raw_input("Enter an adjective: "),
     raw_input("Enter a verb: "),
-    int(number),
+    raw_input("Enter a number: "),
     raw_input("Enter an adjective: "),
     raw_input("Enter a body part: "),
     raw_input("Enter a verb: ")
@@ -48,14 +33,20 @@ wordTypes = [
     "v"
 ]
 
+def getWordType(letter):
+    if letter == "n":
+        return "a noun"
+    if letter == "v":
+        return "a verb"
+    if letter == "a":
+        return "an adjective"
 
 #CHECKING FOR WRONG INPUT
 # https://stackoverflow.com/questions/35462747/how-to-check-a-word-if-it-is-adjective-or-verb-using-python-nltk
 w = 0
 while w <=10:
-    if w != 7:
-        if wn.synsets(userInput[w])[0].pos() != wordTypes[w]:
-            print(colored(userInput[w], attrs=['bold']) + " is not a " + wordTypes[w])
+    if wn.synsets(userInput[w])[0].pos() !=  wordTypes[w]:
+        print(colored(userInput[w], attrs=['bold']) + " is not " + getWordType(wordTypes[w]))
     w += 1
 
 storyText = [
